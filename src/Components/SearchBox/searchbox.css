@@ -1,0 +1,27 @@
+.search{
+    display: flex;
+    padding: 0;
+    margin: 0;
+    .input{
+        height: 25px;
+        background-color: rgb(240, 214, 184);
+        border-radius: 10px;
+        border-color: darkcyan;
+        text-align: center;
+        @media screen and (max-width: 600px) {
+                width: 100px;
+            }
+    }
+    .button{
+        cursor: pointer;
+        margin-left: 10px;
+        padding-top: 5px;
+        height: 30px;
+        width: 70px;
+        border-radius: 10px;
+        border-color: darkcyan;
+        background-color: rgb(32, 29, 29);
+        color: aliceblue;
+        font-weight: 700;
+    }
+}
