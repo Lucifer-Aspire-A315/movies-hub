@@ -5,11 +5,14 @@
     .detail{
         display: flex;
         flex-direction: column;
-        justify-content: baseline;
         align-items: start;
         width: 90%;
         height: 400px;
         margin: 0;
+        .space{
+            display: flex;
+            flex-direction: row;
+                gap: 350px;
         .main{
             display: flex;
             flex-direction: row;
@@ -26,11 +29,11 @@
         font-weight: bold;
         margin-bottom: 8px;
         font-size: xx-large;
-        color: black;
+        color: burlywood;
     }
     .release{
         font-weight: 900;
-        color: black;
+        color: burlywood;
         margin: 0;
     }
 
@@ -39,21 +42,37 @@
         color: gold;
         font-size: large;
     }
-}}
-.tag{
-    margin: 4px;
-    
+       
 }
-.desc {
-    margin: 0;
-    width: 60%;
-    text-align: justify;
-    font-size: larger;
-    margin-bottom: 6px;
-    color: black;
-    overflow-wrap: anywhere;
+ 
 }
+.backdrop {
+    height: 100%;
+    .img {
+        height: 100%;
+        width: 100%;
+        object-fit: fill;
+        border-radius: 20px;
+    }
+}
+        }
 
+    .tag {
+            margin: 4px;
+            color: burlywood;
+        }
+    
+        .desc {
+            margin: 0;
+            width: 60%;
+            text-align: justify;
+            font-size: larger;
+            margin-bottom: 6px;
+            color: burlywood;
+            overflow: hidden;
+            padding-bottom: 5px;
+        }
+        
 }
 
     .img{
@@ -62,6 +81,9 @@
         margin-left: auto;
         margin-right: auto;
         margin-top: 32px;
+    }
+    .casttag{
+        color: burlywood;
     }
     .cast{
         display: flex;
@@ -74,6 +96,10 @@
             justify-content: center;
             height: 300px;
             overflow-x: auto;
+
+            h4{
+                color: burlywood;
+            }
 
             .img{
                 height: 150px;

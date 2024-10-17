@@ -39,6 +39,7 @@ const MovieDetail = () => {
 
     <div className="body">
       <div className="detail card">
+        <div className='space'>
         <div className="main">
         <img
         className="img"
@@ -51,11 +52,28 @@ const MovieDetail = () => {
 
       <p className="rate">Rating: {movie.vote_average}</p>
       </div>
+      
+      
       </div>
+      <div className='backdrop'>
+              <img
+        className="img"
+        src={`https://image.tmdb.org/t/p/w500/${movie.backdrop_path}`}
+        alt={movie.title}
+      />
+            </div>
+            </div>
+      
+      <div className="col">
+        <div>
       <h1 className='tag'>Overview</h1>
             <p className="desc">{movie.overview}</p>
-</div>
-      <h1>Cast</h1>
+            </div>
+
+            
+            </div>
+      </div>
+      <h1 className='casttag'>Cast</h1>
       <div className="cast">
         <div className="card">
       <img
