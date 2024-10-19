@@ -2,6 +2,7 @@
     padding: 8px;
     background-color: gray;
     min-height: 100vh;
+    max-width: fit-content;
     .detail{
         display: flex;
         flex-direction: column;
@@ -87,15 +88,20 @@
     }
     .cast{
         display: flex;
+        flex-direction: row;
+        
         overflow-x: auto;
-        width: 1300px;
         gap: 10px;
-        .card{
+        align-self: baseline;
+        width: 1300px;
+             
+            .card{
+                padding: 0;
             display: flex;
             flex-direction: column;
             justify-content: center;
+            min-width: 200px;
             height: 300px;
-            overflow-x: auto;
 
             h4{
                 color: burlywood;
