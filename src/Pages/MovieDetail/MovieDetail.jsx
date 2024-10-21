@@ -10,7 +10,7 @@ const API_URL = 'https://api.themoviedb.org/3';
 const MovieDetail = () => {
   const { id } = useParams();
   const [movie, setMovie] = useState(null);
-  const [cast, setCast] = useState(null);
+  const [castt, setCast] = useState();
 
   useEffect(() => {
     const fetchMovie = async () => {
@@ -75,65 +75,18 @@ const MovieDetail = () => {
       </div>
       <h1 className='casttag'>Cast</h1>
       <div className="cast">
-        <div className="card">
-      <img
-        className="img"
-        src={`https://image.tmdb.org/t/p/w500/${cast.cast[0].profile_path}`}
-      />
-      <h4>{cast.cast[0].original_name}</h4>
-      <h4>Character :{cast.cast[0].character}</h4>
-      </div>
-      <div className="card">
-      <img
-        className="img"
-        src={`https://image.tmdb.org/t/p/w500/${cast.cast[1].profile_path}`}
-      />
-      <h4>{cast.cast[1].original_name}</h4>
-            <h4>Character :{cast.cast[1].character}</h4>
-
-      </div>
-      <div className="card">
-      <img
-        className="img"
-        src={`https://image.tmdb.org/t/p/w500/${cast.cast[2].profile_path}`}
-      />
-      <h4>{cast.cast[2].original_name}</h4>
-            <h4>Character :{cast.cast[2].character}</h4>
-
-      </div>
-      <div className="card">
-      <img
-        className="img"
-        src={`https://image.tmdb.org/t/p/w500/${cast.cast[3].profile_path}`}
-      />
-      <h4>{cast.cast[3].original_name}</h4>
-            <h4>Character :{cast.cast[3].character}</h4>
-
-      </div>
-      <div className="card">
-      <img
-        className="img"
-        src={`https://image.tmdb.org/t/p/w500/${cast.cast[4].profile_path}`}
-      />
-      <h4>{cast.cast[4].original_name}</h4>
-            <h4>Character :{cast.cast[4].character}</h4>
-</div>
-      <div className="card">
-      <img
-        className="img"
-        src={`https://image.tmdb.org/t/p/w500/${cast.cast[5].profile_path}`}
-      />
-      <h4>{cast.cast[5].original_name}</h4>
-            <h4>Character :{cast.cast[5].character}</h4>
-</div>
-      <div className="card">
-      <img
-        className="img"
-        src={`https://image.tmdb.org/t/p/w500/${cast.cast[6].profile_path}`}
-      />
-      <h4>{cast.cast[6].original_name}</h4>
-            <h4>Character : {cast.cast[6].character}</h4>
-</div>
+          {castt.cast.map((actor)=>(
+            <>
+                <div className="card" key={actor.order}>
+                <img
+              className="img"
+              key={actor.cast_id}
+              src={`https://image.tmdb.org/t/p/w500/${actor.profile_path}`} />
+              <h4>{actor.original_name}</h4>
+              <h4>{actor.character}</h4>
+              </div>
+              </>
+          ))}
       </div>
     </div>
   );
